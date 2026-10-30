@@ -13,8 +13,8 @@ use crate::error::{IcalError, Result};
 
 const MAX_FEED_BYTES: usize = 20 * 1024 * 1024;
 const MAX_REDIRECTS: usize = 5;
-const NOT_A_CALENDAR: &str = "This link does not lead to a calendar. Check that you copied the \
-    whole iCal or webcal link.";
+const NOT_A_CALENDAR: &str = "This link does not lead to a calendar. Copy the whole iCal or \
+    webcal link.";
 const LINK_RULES: &str = "The link must be a public https or webcal address.";
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]

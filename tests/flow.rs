@@ -241,7 +241,7 @@ async fn the_sign_in_page_works_on_a_phone_and_names_the_app_safely() {
     let (status, headers, page) = server.call(get_request(&path)).await;
     assert_eq!(status, StatusCode::OK);
     assert!(page.contains("width=device-width"));
-    assert!(page.contains("&lt;b&gt;Evil&lt;/b&gt;") && !page.contains("<b>Evil"));
+    assert!(page.contains("&#60;b&#62;Evil&#60;/b&#62;") && !page.contains("<b>Evil"));
     assert!(
         page.contains("claude.ai"),
         "the page names where the answer goes"
